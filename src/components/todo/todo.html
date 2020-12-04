@@ -1,0 +1,16 @@
+
+  <div>
+    <h1>My to-do App</h1>
+    <div>
+      A test
+      <TodoForm @added="addTask" button-text="Create Task"/>
+      <ul>
+        <li v-for="task in tasks">
+          <input aria-label="task" @click="completeTask(task)" type="checkbox" :checked="task.completed">
+          <span  v-bind:class="{isNotActive: task.completed===true}">
+            {{ task.description }}
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>

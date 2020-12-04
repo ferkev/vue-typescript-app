@@ -1,0 +1,7 @@
+<div>
+  <form @submit.prevent="emitTask">
+    <input aria-label="input" v-model="task" type="text" placeholder="Enter a Task...">
+    <button type="submit">{{ buttonText }}</button>
+  </form>
+</div>
+
